@@ -1,0 +1,163 @@
+blackEverythingwhite: Aryan Bhatt, James Cruse-Mulhall, Eugene Thomas 
+APCS2 pd4 
+
+S E E K E R  -- D E V L O G 
+
+REFLECTION: 
+
+Obstacles Overcome (and hw!)
+One of the main obstacles that was overcome was how to actually write these maze generation 
+Algorithms. With the aid of the interwebs, visualization tools, and more visualization tools, we were 
+Able to utilize recursive methods to encode four different maze generation algorithms (Depth-Search, Eller’s, Prim’s, and Tree-Growing). 
+Unresolved Issues
+	Luckily Jack and Aryan were there, but Eugene finished the project still not completely sure how to 
+code the Eller’s algorithm even though he understood the basic gist of it. 
+Cool Stuff Learned (conceptual and/or practical)
+	One of the most fun things that our group realized throughout this project was the ability to write text 
+on the world in Processing, as well as Jack’s code that denoted a moving clock using trigonometry. 
+Mid-development Design Changes (and why!)
+	One of the best decisions our group ever made was turning this game more into a presentation on 
+the different kinds of maze algorithms instead of a game of traversing a maze. In doing this, we were able to utilize our skills from second semester APCS while having a fun factor remain. 
+Lessons Learned (...which you might apply to future projects, CS or otherwise)
+	One of the greatest lessons we learned about this project was that sometimes doing 
+something that is more minimalist can lead to a more cohesive and a more rewarding result. We, at this point, believe that adding obstacles and a more rigorous time aspect would have cheapened the game to a point where it would have taken away from the message of teaching students about the different maze-generation algorithms. This can be applicable to all projects and life at-large with the saying “less is more.” 
+
+IMPORTANT DATES: 
+
+May 17th: 
+     - The idea was created by our very own Jack, with Aryan and Eugene adding onto the idea to make the game more enjoyable.
+     - The project proposal was created by Eugene, detailing the narrative behind the game as well as the tentative rules and regulations
+	 
+May 19th: 
+
+     - Our repo was made, as well as the beginning of the development log and the plan file.
+
+May 23rd:
+
+    Today we ironed out details about structure of our game. We decided
+    that a 2D Array or Matrix would be best for our game. We also decided
+    use orthagonal distance to illuminate unvisited maze paths. We had a long
+    debate over using Aryan's 2 orthogonal squares away from the player vs my
+    using vision radius vs Eugenio's 1 orthogonal square from the player idea.
+    Was a productive day because we were able to put that design choice to bed as
+    well as let each other see what we were perceiving what the game would be in
+    our minds. Now I'm going to list some of the design choices I believe we have
+    made.
+
+    Player:
+	A sphere on the map, smaller than the tiles which comprise the paths/walls
+
+    Walls/Path:
+	Each shall be a tile on the map, or a rectangular space that designates whether
+	or not the player can occupy it. Each tile is illuminated when the player is 1
+	orthagonal square away.
+
+    Obstacles:
+	Obstacles will likely be smaller than the tiles in which they reside and cause the
+	player to restart the map they are on with one less life when hit by the player.
+	They may move within the tile they reside. We may also choose to implement an
+		intensity feature in which the closer a player gets to an obstacles, regardless of
+	whether it's square is illuminated, the brighter the outline of the obstacles will be.
+
+    Exit:
+	Randomly generated in each map and may or may not implement the intensity feature.
+
+May 25th:
+
+    Today a team representative met with Mr. Brown in order to make sure that the team was on
+    the right track and to see if there were any measures they could take in the future to make
+    sure deliverables were delirvered on time and in good quality.
+
+    The solutions proposed were:
+    	- 2 group members will commit to print out hard copies
+	- Each assignment will be emailed to each group member as text and reviewed upon completion
+	line by line to ensure all directives have been accomplished
+	- Receipts for commits and work will be sent to other group members upon completion to ensure
+	that the assignment is done
+
+    The yellow light status of the project was also discussed. Mr. Brown said that the most rich part
+    of the proposal was the maze generation aspect. The idea of researching algorithms instead of trying
+    to blindly make one was reaffirmed. A group member later looked up different maze generation algorithms
+    and understood the process much better. The proposal to skype and discuss the algorithms was proposed
+    but did not work out due to schedule conflicts amongst the group. The plan is for the group to discuss the
+    algs today in class and make sure each member understands the algs so that we can better implement them.
+
+May 28th:
+
+    -Jack
+    Today I got a nice breakfast and decided to code the maze alg in a park. Coding outside is actually quite calm
+    however a lack of wifi can stifle productivity. Luckily a hotspot saved me from not having access to the Processing
+    reference page. I coded the tile and wall classes with a wall being a child of a tile since a wall is just a type of
+    tile. I utilized the randomized depth first search algo to make the first maze generating algo but there is currently
+    a bug in which certain tiles that are unvisited are marked as visited, messing up the maze traversal. Not sure what's
+    causing it as of now but going to dive in tomorrow with the help of my team to resolve it.
+   
+    -Eugene
+    Due to a busy schedule, I did not have a machine at my disposal; however, while at work and then at my aunt's house, I thought
+    of how the character class would be utilized in the grand scheme of the project. At first, I followed the UML that was available, 
+    but I quickly learned that it was subject to change based on what I brainstormed. While brainstorming I thought of the three essential
+    questions: What? How? And Why? After being able to answer all three of those questions for various methods, I had a mental image of 
+    what I wanted the character class to be like. 
+
+May 29th:
+
+    -Jack
+    I debugged the thing by changing the line that fills gaps between cells from creating a new cell to typecasting the wall
+    as a cell. Added a bunch of comments to explain everything too. The maze generator is pretty cool.
+    Also just fixed the backtrack tracker and made it nicer.
+	
+    -Eugene 
+    After looking in shock and amazement at the maze generation, the Character class was written with various methods. One of the main 
+    issues I was having, was relating the Character class back with the maze that was generated (this stemming from my lack of understanding 
+    of the totality of Processing still). Luckily, Aryan fleshed out all of the issues I had and was truly the savior of the Character class. 
+    In addition, the readMe was written by me, detailing what our current deliverable presentation had relative to what we want when the assignment is due. 
+
+May 30th:
+ 
+     As a collective, we discussed what remains now that we have an algorithm for building a maze. In this discussion, we arrived to two 
+     classes of goals that we have: goals that are integral to the game and goals that can be used to robustify our game. Some of the goals
+     that are integral to the game include ironing out the issues of the character class and allowing it to interact with the entire game board 
+     with coded keys. One of the most interesting ideas that was spawned from this discussion in class was the fact that we should include multiple 
+     algorithms for developing a maze, each producing a maze of a different difficulty. At home, we completed the homework assignments, keeping in 
+     mind the ideas from class. 
+
+June 2nd: 
+
+    Today was the day that both Aryan and Eugene were going to be absent. Thus, Jack decided to spend that period fleshing out his maze generation algorithm
+    as well as working on the character class to ensure that it works. By the end of this period/day, our character class was 100% fully functional and you were
+    able to solve every possible maze and when you reach the exit square, the screen would close. 
+
+June 3rd: 
+
+    Today, we finalized which maze generation responsibilities each of us had. As you already know, Jack was responsible for the Depth Search Maze Generation Algorithm
+    that was utilized in our first level. Eugene is in charge of the Eller's method for maze generation which involves subdividing sets at random and joining the two sets
+    at random. For Eller's those sets are then continuously connected vertically down the maze and once you reach the bottom of the maze, you are done. Aryan is in charge
+    of doing Prim's algorithm which select a random square and radiates outward. 
+
+June 4th: 
+
+    - Eugene 
+    Coding Eller's was a huge challenge. There is nothing else to that because almost no progress was made in the coding of this algorithm. It was a stressful weekend, and it really impeded on my ability to perform this task well at all. I 
+ 
+After Eugene’s testimony, the other two group members continued improving upon parts of the project that were already coded, especially the character class and the maze depth class as well. 
+June 5th: 
+
+	All of us could agree (especially Aryan and Eugene) that this was a day stock-full of breakthroughs about each of the two algorithms that remained to be done. It was the day that we needed and an integral part of our project. 
+
+
+
+June 6th: 
+
+	As a group of three, all of us finished our portions of the project. We were somewhat pressed for time, but with preserved nonetheless and learned a lot about time management and algorithms along the way. In addition, we were able to also include a tree-growing algorithm which we did not think we would be able to make. 
+
+
+
+
+
+
+
+
+
+
+
+
